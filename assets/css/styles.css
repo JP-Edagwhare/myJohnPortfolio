@@ -947,12 +947,13 @@ img {
 
 /*==================== CONTACT ME ====================*/
 .contact__container{
-  row-gap: 3rem;
+  row-gap: 1rem;
 }
 
 .contact__information{
   display: flex;
   margin-bottom: var(--mb-2);
+  margin: 0px 0px 12px !important;
 }
 
 .contact__icon{
@@ -998,14 +999,25 @@ img {
   padding: .25rem .5rem .5rem 0;
 }
 
+.social__icon__footer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
 /*==================== FOOTER ====================*/
 .footer{
   padding-top: 2rem;
 }
 
 .footer__container{
-  row-gap: 3.5rem;
+ justify-items: center;
 }
+
+#footer__name__title {
+  margin-bottom: 2rem;
+}
+
 
 .footer__bg{
   background-color: var(--first-color-second);
@@ -1022,10 +1034,10 @@ img {
 }
 
 .footer__links{
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0;
-  gap: .5rem;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .footer__link:hover{
@@ -1126,6 +1138,10 @@ img {
     width: 180px;
   }
 
+  .home__title, .home__subtitle {
+    text-align: center;
+  }
+
   .skills__titles{
     font-size: var(--normal-font-size)
   }
@@ -1171,10 +1187,18 @@ img {
   }
 
   .footer__links{
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     padding: 0;
     gap: .5rem;
+  }
+
+  .footer__menu__items {
+    display: flex !important;
+  }
+
+  #footer__menu__items{
+    display: none;
   }
 
 }
@@ -1184,7 +1208,25 @@ img {
   .videos__content{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+ 
+  .home__title, .home__subtitle {
+    text-align: center;
+  }
 
+  #footer__menu__items{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 568px){
+  .home__title, .home__subtitle {
+    text-align: center;
+  }
+
+  #footer__menu__items{
+    display: none;
+  }
 }
 
 /* For medium devices */
@@ -1200,6 +1242,10 @@ img {
     order: 1;
     justify-self: center;
   }
+
+  /* .home__title, .home__subtitle {
+    text-align: center;
+  } */
   
   .about__container,
   .skills__container,
@@ -1228,11 +1274,11 @@ img {
   }
 
   .section{
-    padding: 6rem 0 2rem;
+    padding: 1rem 0 0.5rem;
   }
 
   .section__subtitle{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .header{
@@ -1384,12 +1430,12 @@ img {
 
   .footer__links{
     flex-direction: row;
-    column-gap: 2rem;
+    column-gap: 1rem;
   }
 
-  .footer__socials{
+  /* .footer__socials{
     justify-self: flex-end;
-  }
+  } */
 
   .footer__copy{
     margin-top: 4.5rem;
